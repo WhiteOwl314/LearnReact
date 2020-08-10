@@ -4,7 +4,7 @@ import Hello from "./Hello";
 function App() {
   return (
       <>
-          <Hello name="react" color="blue" backgroundColor="red"/>
+          <Hello color="blue" backgroundColor="red"/>
       </>
   );
 }
