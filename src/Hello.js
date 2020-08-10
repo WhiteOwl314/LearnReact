@@ -1,8 +1,10 @@
 import React from "react";
 
-function Hello({ backgroundColor, name, color }) {
+function Hello({ backgroundColor, name, color, isSpecial }) {
     return (
         <div style={{backgroundColor, color}}>
+            { isSpecial ? <b>*</b> : null}
+            { isSpecial && <b>*</b>}
             안녕하세요 {name}
         </div>
     )
