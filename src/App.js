@@ -125,6 +125,11 @@ function App() {
         []
     );
 
+    const count = useMemo(
+        ()=> countActiveUsers(users),
+        [users]
+    )
+
   return (
       <>
           <CreateUser
@@ -138,7 +143,7 @@ function App() {
               onToggle={onToggle}
               onRemove={onRemove}
           />
-          <div>활성사용자 수 : 0</div>
+          <div>활성사용자 수 : {count}</div>
       </>
   );
 }
