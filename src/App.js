@@ -63,6 +63,8 @@ function reducer(state, action) {
     }
 }
 
+export const UserDispatch = React.createContext(null);
+
 function App() {
     const [{username, email}, onChange, reset] = useInputs({
         username: '',
@@ -116,7 +118,7 @@ function App() {
     )
 
   return (
-      <>
+      <UserDispatch.Provider value={dispatch}>
           <CreateUser
               username={username}
               email={email}
@@ -129,7 +131,7 @@ function App() {
               onRemove={onRemove}
           />
           <div>활성사용자 수 : {count}</div>
-      </>
+      </UserDispatch.Provider>
   );
 }
 
