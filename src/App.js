@@ -47,7 +47,7 @@ function App() {
         username,
         email
       };
-      setUsers([users.concat(user)]);
+      setUsers(users.concat(user));
 
       setInputs({
         username: '',
