@@ -92,26 +92,6 @@ function App() {
         [username, email,reset]
     );
 
-    const onToggle = useCallback(
-        id=>{
-            dispatch({
-                type: 'TOGGLE_USER',
-                id
-            });
-        },
-        []
-    );
-
-    const onRemove = useCallback(
-        id=>{
-            dispatch({
-                type: 'REMOVE_USER',
-                id
-            });
-        },
-        []
-    );
-
     const count = useMemo(
         ()=> countActiveUsers(users),
         [users]
@@ -127,8 +107,6 @@ function App() {
           />
           <UserList
               users={users}
-              onToggle={onToggle}
-              onRemove={onRemove}
           />
           <div>활성사용자 수 : {count}</div>
       </UserDispatch.Provider>
