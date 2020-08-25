@@ -44,7 +44,7 @@ function reducer(state, action) {
                     [action.name]: action.value
                 }
             };
-        case 'CREATE_UESR':
+        case 'CREATE_USER':
             return {
                 inputs: initialState.inputs,
                 users: state.users.concat(action.user)
